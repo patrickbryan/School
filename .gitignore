@@ -48,6 +48,7 @@ Temporary Items
 *.tar.gz
 *.doc
 *.ods
+*.odt
 
 # Project files specific
 class sched.png
