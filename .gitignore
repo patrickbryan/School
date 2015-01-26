@@ -42,12 +42,14 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Project files
+# Project files general
 *.pdf
 *.tar
 *.tar.gz
 *.doc
 *.ods
+
+# Project files specific
 class sched.png
 Compilers/CIS 4650 (W15) Assignment 1.html
 Compilers/CIS 4650 (W15) Assignment 1_files/dbmcc.css
@@ -56,3 +58,4 @@ Image Processing/Lab 2/lab1.py
 Image Processing/Lab 2/lab2.py
 Image Processing/Lab 2/pilatus1947.png
 Image Processing/Lab 2/zbridge.png
+Intelligent Systems/
