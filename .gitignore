@@ -43,8 +43,8 @@ Temporary Items
 .apdisk
 
 # Project files
-.pdf
-.tar
-.tar.gz
-.doc
-.ods
+*.pdf
+*.tar
+*.tar.gz
+*.doc
+*.ods
