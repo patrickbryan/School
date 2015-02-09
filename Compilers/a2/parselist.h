@@ -11,7 +11,8 @@
 #include <regex.h>
 
 #define INPUT_LENGTH 1024
-#define TOKEN_LENGTH 16
+
+typedef enum {CHAR, INT, REAL, STR, CAR, CDR, LPAREN, RPAREN, SET, PLUS, SEMI} token_t;
 
 /* Start of the recursive descent parser
  */
@@ -21,5 +22,29 @@ void recDesParser(void);
  * returns 0 if eof or no token found.
  */
 int getNextToken(void);
+
+void scanner(void);
+
+void STMTS(void);
+
+void STMT(void);
+
+void ASSIGN(void);
+
+void LISTEXPR(void);
+
+void CLIST(void);
+
+void VAR(void);
+
+void CONCAT(void);
+
+void ITEMS(void);
+
+void ITEM(void);
+
+void consume(token_t t);
+
+void error(void);
 
 #endif
