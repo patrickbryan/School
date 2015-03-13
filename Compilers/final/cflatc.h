@@ -1,0 +1,26 @@
+/*
+ * The header file for cflatc.c
+ * Patrick Bryan - CIS4650, Winter 2015
+ * University of Guelph
+ */
+
+#ifndef CFLATC_H
+
+#include <stdio.h>
+#include <string.h>
+
+int fileOpened(char* fileName);
+
+void compile(void);
+
+void semanticAnalysis(void);
+
+void typeCheck(void);
+
+void syntaxAnalysis(void);
+
+void scanner(void);
+
+int getNextToken(void);
+
+#endif

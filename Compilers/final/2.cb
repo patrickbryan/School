@@ -1,0 +1,14 @@
+/*This program has 3 errors*/
+/*Error 1: No semi-colon on line 8
+ *Error 2: Var init and decl on same line (13)
+ *Error 3: No return statement for function line 14
+ */
+
+int _a;
+float _b
+char _B;
+int a[10];
+
+void main() {
+    int wrong = 890;
+}

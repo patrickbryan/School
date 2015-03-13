@@ -1,0 +1,18 @@
+/*This program has 2 errors*/
+/*Error 1: Double if (expect LPAREN) line 12
+ *Error 2: Invalid expr (expected int) line 13
+ */
+
+int _a;
+float _b;
+char _B;
+int a[10];
+
+void main() {
+    if if ( _a = 0) {
+        if ('B') {
+        }
+    }
+        
+    return 1;
+}

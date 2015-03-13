@@ -1,0 +1,9 @@
+/*This program has 1 error*/
+/*Error 1: Expected stmt or ; on line 6
+ */
+
+void main() {
+    for (;) {
+    }
+    return 1;
+}

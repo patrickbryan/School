@@ -1,0 +1,57 @@
+/* This test program has no errors */
+/* Tests: 
+ * - global vars
+ * - arrays
+ * - initializing variables
+ * - expressions
+ * - control structures
+ * - comments
+ * - functions*/
+
+int _a;
+float _b;
+char _B;
+int a[10];
+
+int main() {
+    char c[5+15];
+    float f;
+    int i;
+    
+    _a = 0;
+    i = 100;
+    i = 2002;
+    _b = 0.5;
+    f = 1.0;
+    f = 6.02e23;
+    f = 6.02E+23;
+    i = _a - 200;
+    i = 5 * 5 / 5 % 2
+    _B = '\n';
+    _B = '\0';
+    _B = ' ';
+    _B = 'a';
+    _B = '4';
+    
+    if ( i <= 1 && _a != 2 ) {
+        if ( i >= 1 || f > 2 || f < 10.6 ) {
+            i++;
+        }
+        else if (_B == '4') {
+            i--;
+        } else {
+            i = _a + i;
+        }
+        
+        for ( i = 0; i < 10; i++ ) {
+            puti(i);
+        }
+        
+        while ( i != 0 ) {
+            putc(_B);
+            i = 0;
+        }
+    }
+
+    return 1;
+}
