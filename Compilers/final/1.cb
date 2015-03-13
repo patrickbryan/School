@@ -1,13 +1,6 @@
 /* This test program has no errors */
-/* Tests: 
- * - global vars
- * - arrays
- * - initializing variables
- * - expressions
- * - control structures
- * - comments
- * - functions*/
-
+/* multi line
+comment */
 int _a;
 float _b;
 char _B;
