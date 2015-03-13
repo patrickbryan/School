@@ -64,3 +64,11 @@ Compilers/CIS 4650 (W15) Assignment 2_files/dbmcc.css
 Compilers/CIS 4650 (W15) Assignment 2_files/marble.gif
 Computer Security/finding primes by eulers theorem.txt
 .~lock.Semester 8.ods#
+*.exe
+Compilers/final/cflatc.o
+*.xml
+*.properties
+Compilers/final/example abs.txt
+Image Processing/a3 Project/image enhancement.jl
+Computer Security/a3/msg.txt
+Compilers/final/nbproject/private/Default-build.log
