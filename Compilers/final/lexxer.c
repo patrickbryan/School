@@ -5,7 +5,7 @@ extern int yylex();
 extern int yylineno;
 extern char* yytext;
 
-int main(void) {
+int lex(void) {
 	int ntoken, vtoken;
 
 	ntoken = yylex();
