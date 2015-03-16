@@ -11,7 +11,7 @@ link : compile
 
 compile :
 	lex lexxer.l
-	gcc -Wall -ansi -pedantic -g -c ./cflatc.c ./lex.yy.c -Iinclude
+	gcc -ansi -pedantic -g -c ./cflatc.c ./lex.yy.c -Iinclude
 
 clean :
 	rm *.o
