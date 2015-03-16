@@ -7,6 +7,7 @@
 #include "cflatc.h"
 
 FILE *sourceFile;
+char* input;
 
 int main(int argc, char *argv[])
 {
