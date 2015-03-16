@@ -10,8 +10,10 @@ link : compile
 	gcc -o ./cflatc ./cflatc.o
 
 compile :
-	gcc -Wall -ansi -pedantic -g -c ./cflatc.c -Iinclude
+	lex lexxer.l
+	gcc -Wall -ansi -pedantic -g -c ./cflatc.c ./lex.yy.c -Iinclude
 
 clean :
 	rm *.o
 	rm cflatc.exe
+	rm lex.yy.c

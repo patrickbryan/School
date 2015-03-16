@@ -7,6 +7,7 @@
  
 %{
     #include "lexxer.h"
+    #include "y.tab.h"
 %}
  
 %%
@@ -23,8 +24,8 @@
 "putc"                        return PUTC;
 "puti"                        return PUTI;
 "putf"                        return PUTF;
-"/*"		     		return COMMENTBEGIN;
-"*/"				return COMMENTEND;
+"/*"		     		      return COMMENTBEGIN;
+"*/"				          return COMMENTEND;
 "char"                        return CHAR;
 "int"                         return INT;
 "float"                       return FLOAT;
@@ -54,13 +55,9 @@
 "<"                           return LT;
 "!"                           return NOT;
 "="                           return ASSIGN;
-[e]				return EXP;
-[E]				return EXP;
 [_a-zA-Z][a-zA-Z0-9]*         return IDENTIFIER;
-[1-9]+[0-9]*                  return INTVAL;
-0[.][0-9]+                    return FLOATVAL;
-[1-9]+[0-9]*\.[0-9]+          return FLOATVAL;
-"0"                           return INTVAL;
+(0|[1-9]+[0-9]*)\.[0-9]+([eE][+-]?[1-9][0-9]*)?      return FLOATVAL;
+(0|[1-9]+[0-9]*)              return INTVAL;
 [ \n\t]                       ;
 .                             printf("unexpected character\n");
 %%
