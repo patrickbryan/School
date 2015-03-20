@@ -17,10 +17,6 @@ void semanticAnalysis(void);
 
 void typeCheck(void);
 
-void syntaxAnalysis(void);
-
-void scanner(void);
-
-int getNextToken(void);
+int syntaxAnalysis(void);
 
 #endif

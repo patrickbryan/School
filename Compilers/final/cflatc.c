@@ -5,6 +5,7 @@
  */
 
 #include "cflatc.h"
+#include "lexxer.h"
 
 FILE *sourceFile;
 char* input;
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
     }
     else if (strlen(argv[2]) != 2 || argv[2][0] != '-') {
         printf("Unrecognized argument");
-        printf("Use: cflatc -[asic]\n");
+        printf("Use: cflatc sourceFile -[asic]\n");
         return -1;
     }
     else if (!fileOpened(argv[1])) {
@@ -45,7 +46,7 @@ int main(int argc, char *argv[])
             break;
         default:
             printf("Unrecognized argument");
-            printf("Use: cflatc -[asic]\n");
+            printf("Use: cflatc sourceFile -[asic]\n");
             return -1;
     }
     return 0;
@@ -71,16 +72,6 @@ void typeCheck(void) {
     
 }
 
-/*TODO: finish*/
-void syntaxAnalysis(void) {
-    scanner();
-}
-
-void scanner(void) {
-    
-}
-
-int getNextToken(void)
-{
-    return fscanf(stdin, "%s[ \n]", input);
+int syntaxAnalysis(void) {
+    return lex();
 }

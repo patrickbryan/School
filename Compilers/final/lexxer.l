@@ -55,6 +55,7 @@
 "<"                           return LT;
 "!"                           return NOT;
 "="                           return ASSIGN;
+"."                           return DOT;
 [_a-zA-Z][a-zA-Z0-9]*         return IDENTIFIER;
 (0|[1-9]+[0-9]*)\.[0-9]+([eE][+-]?[1-9][0-9]*)?      return FLOATVAL;
 (0|[1-9]+[0-9]*)              return INTVAL;

@@ -7,6 +7,7 @@ extern char* yytext;
 
 int lex(void) {
 	int ntoken, vtoken;
+    int hasError = 0;
 
 	ntoken = yylex();
 	while(ntoken) {
@@ -66,10 +67,10 @@ int lex(void) {
 			case CHARVAL: printf("CHARVAL"); break;
 			case FLOATVAL: printf("FLOATVAL"); break;
 			case EXP: printf("EXP"); break;
-			default: printf("unknown!!!!");
+			default: printf("unknown!!!!"); hasError = 1;
 		}
 		printf(" %s\n", yytext);
 		ntoken = yylex();
 	}
-	return 0;
+	return hasError;
 }
