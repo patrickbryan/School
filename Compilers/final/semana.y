@@ -50,11 +50,11 @@ function_def_list   : function_def                              {;}
                     ;
                    
 function_def    : type_name MAIN LPAREN param_list RPAREN LBRACE var_decl_list stmt_list RBRACE {;}
-                | type_name identifier LPAREN param_list RPAREN LBRACE var_decl_list stmt_list RBRACE {;}
+                | type_name IDENTIFIER LPAREN param_list RPAREN LBRACE var_decl_list stmt_list RBRACE {;}
                 ;
 
-param_list  : type_name identifier                              {;}
-            | param_list COMMA type_name identifier             {;}
+param_list  : type_name IDENTIFIER                              {;}
+            | param_list COMMA type_name IDENTIFIER             {;}
             ;
                    
 type_name   : INT                                               {;}
