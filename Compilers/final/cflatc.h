@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <string.h>
 
+extern int lex(void);
+
 int fileOpened(char* fileName);
 
 void compile(void);

@@ -7,7 +7,7 @@ int symbolVal(char* symbol);
 void updateSymbolVal(char* symbol, int val);
 %}
 
-%union {int integer; char character; float decimal; char* id}
+%union {int integer; char character; float decimal; char* id;}
 %start program
 %token TYPEDEF STRUCT IDENTIFIER LBRACE RBRACE SEMICOLON LSQBRACE RSQBRACE
 %token MAIN LPAREN RPAREN COMMA INT FLOAT CHAR IF ELSE FOR WHILE RETURN
@@ -17,6 +17,8 @@ void updateSymbolVal(char* symbol, int val);
 %type <integer> INTVAL
 %type <character> CHARVAL
 %type <decimal> FLOATVAL
+
+%expect 231
 
 %%
 
@@ -146,6 +148,9 @@ constant    : INTVAL                                            {;}
             ;
             
 %%
+
+extern FILE *yyin;
+
 int computeSymbolIndex(char token)
 {
     return 1;
@@ -156,7 +161,7 @@ int symbolVa(char symbol)
     return 1;
 }
 
-void updateSymbolVal(char symbol, int val)
+void updateSymbolVal(char* symbol, int val)
 {
     
 }
