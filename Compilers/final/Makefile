@@ -16,6 +16,6 @@ compile :
 
 clean :
 	rm *.o
-	rm cflatc.exe
+	rm cflatc
 	rm lex.yy.c
 	rm y.tab.*
