@@ -171,7 +171,7 @@ void yyerror (char *s)
     fprintf(stderr, "%s\n", s);
 }
 
-int main (void)
+int semantic (void)
 {
     if (yyin == NULL)
         yyin = stdin;

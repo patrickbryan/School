@@ -73,5 +73,5 @@ void typeCheck(void) {
 }
 
 int syntaxAnalysis(void) {
-    return lex();
+    return semantic();
 }
