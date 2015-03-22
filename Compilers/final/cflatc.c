@@ -6,6 +6,7 @@
 
 #include "cflatc.h"
 #include "lexxer.h"
+#include "semana.y"
 
 FILE *sourceFile;
 char* input;
