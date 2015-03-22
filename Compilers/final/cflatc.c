@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         return -1;
     }
     else if (strlen(argv[2]) != 2 || argv[2][0] != '-') {
-        printf("Unrecognized argument");
+        printf("Unrecognized argument\n");
         printf("Use: cflatc sourceFile -[asic]\n");
         return -1;
     }
@@ -30,23 +30,23 @@ int main(int argc, char *argv[])
     
     switch (argv[2][1]) {
         case 'c':
-            printf("compiling and outputting MIPS R2000 assembler (.asm)");
+            printf("compiling and outputting MIPS R2000 assembler (.asm)\n");
             compile();
             break;
         case 'i':
-            printf("performing sematic analysis and outputting intermediate representation (.inr)");
+            printf("performing sematic analysis and outputting intermediate representation (.inr)\n");
             semanticAnalysis();
             break;
         case 's':
-            printf("performing type checking and outputting symbol table (.sym)");
+            printf("performing type checking and outputting symbol table (.sym)\n");
             typeCheck();
             break;
         case 'a':
-            printf("performing syntax analysis and outputting abstract syntax (.abs)");
+            printf("performing syntax analysis and outputting abstract syntax (.abs)\n");
             syntaxAnalysis();
             break;
         default:
-            printf("Unrecognized argument");
+            printf("Unrecognized argument\n");
             printf("Use: cflatc sourceFile -[asic]\n");
             return -1;
     }
@@ -74,5 +74,5 @@ void typeCheck(void) {
 }
 
 int syntaxAnalysis(void) {
-    
+    return sem();
 }
