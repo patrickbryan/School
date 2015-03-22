@@ -8,8 +8,7 @@
 
 #include <stdio.h>
 #include <string.h>
-
-extern int sem(void);
+#include "y.tab."
 
 int fileOpened(char* fileName);
 
