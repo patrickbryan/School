@@ -7,6 +7,7 @@
 #include "cflatc.h"
 #include "lexxer.h"
 
+extern FILE *yyin;
 FILE *sourceFile;
 char* input;
 

@@ -9,9 +9,6 @@
 #include <stdio.h>
 #include <string.h>
 
-extern FILE *yyin;
-extern yyparse();
-
 int fileOpened(char* fileName);
 
 void compile(void);
