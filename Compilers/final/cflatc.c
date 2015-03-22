@@ -6,7 +6,6 @@
 
 #include "cflatc.h"
 #include "lexxer.h"
-#include "y.tab.c"
 
 FILE *sourceFile;
 char* input;
@@ -74,5 +73,9 @@ void typeCheck(void) {
 }
 
 int syntaxAnalysis(void) {
-    return semantic();
+    if (yyin == NULL)
+        yyin = stdin;
+    while (!feof(yyin))
+        yyparse();
+    return 0;
 }
