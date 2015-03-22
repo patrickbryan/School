@@ -5,7 +5,6 @@ void yyerror (char *s);
 char* symbols[1024];
 int symbolVal(char* symbol);
 void updateSymbolVal(char* symbol, int val);
-int sem(void);
 %}
 
 %union {int integer; char character; float decimal; char* id;}
@@ -172,7 +171,7 @@ void yyerror (char *s)
     fprintf(stderr, "%s\n", s);
 }
 
-int sem(void) {
+int main(void) {
     if (yyin == NULL)
         yyin = stdin;
     while (!feof(yyin))
