@@ -1,21 +1,21 @@
-default : link
+CFLAGS=-ansi -pedantic -g -Iinclude
 
-lockdown : link
+LEX=flex
+YACC=bison -y
+YFLAGS=-d
 
-all : link
+default : all
 
-cflatc : link
+all : cflatc
 
-link : compile
-	gcc -o ./cflatc ./cflatc.o
+cflatc: lexxer.o semana.tab.o cflatc.o
+	$(CC) $(CFLAGS) $^ -o $@
+	
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-compile :
-	yacc -d -y semana.y
-	lex lexxer.l
-	gcc -ansi -pedantic -g -c ./cflatc.c ./lex.yy.c ./y.tab.c -Iinclude
-
-clean :
-	rm *.o
-	rm cflatc
-	rm lex.yy.c
-	rm y.tab.*
+lexxer.c: lexxer.l:
+	$(LEX) lexxer.l
+	
+semana.tab.c semana.tab.h: semana.y
+	$(YACC) $(YFLAGS) $<
