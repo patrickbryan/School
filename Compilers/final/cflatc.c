@@ -74,5 +74,6 @@ void typeCheck(void) {
 }
 
 int syntaxAnalysis(void) {
-    return sem();
+    yyparse();
+    return 0;
 }

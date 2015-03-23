@@ -170,11 +170,3 @@ void yyerror (char *s)
 {
     fprintf(stderr, "%s\n", s);
 }
-
-int sem(void) {
-    if (yyin == NULL)
-        yyin = stdin;
-    while (!feof(yyin))
-        yyparse();
-    return 0;
-}
