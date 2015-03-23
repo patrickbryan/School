@@ -1,9 +1,10 @@
 /*This program has 1 error*/
-/*Error 1: Expected stmt or ; on line 6
+/*Error 1: variable a already declared on line 8
  */
 
+int a;
+
 void main() {
-    for (;) {
-    }
-    return 1;
+    int a;
+    return;
 }

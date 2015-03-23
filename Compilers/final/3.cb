@@ -1,6 +1,6 @@
 /*This program has 2 errors*/
-/*Error 1: Double if (expect LPAREN) line 12
- *Error 2: Invalid expr (expected int) line 13
+/*Error 1: assigning char value to int on line 14
+ *Error 2: abc not defined on line 16
  */
 
 int _a;
@@ -9,10 +9,11 @@ char _B;
 int a[10];
 
 void main() {
-    if if ( _a = 0) {
-        if ('B') {
-        }
+    {
+        int abc;
+        _a = 'c';
     }
+    a = a + abc;
         
-    return 1;
+    return;
 }

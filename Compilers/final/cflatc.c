@@ -6,6 +6,7 @@
 
 #include "cflatc.h"
 #include "lexxer.h"
+#include "y.tab.h"
 
 extern FILE *yyin;
 FILE *sourceFile;

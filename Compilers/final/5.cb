@@ -1,36 +1,11 @@
 /*This program has 6 errors*/
-/*Error 1: Expected int line 8
- *Error 2: Unknown return type line 12
- *Error 3: Expected int line 13
- *Error 4: Invalid var name line 14
- *Error 5: Invalid type. Expected char line 31
- *Error 6: Invalid char on line 32
+/*Error 1: invalid array bounds on line 9
+ *Error 2: invalid return type. Expect int, recieved char on line 10
  */
 
-int _a;
-float _b;
-char _B;
-int a[10.142];
+int _a[10];
 
-double main() {
-    char c['A'];
-    float if;
-    int i;
-    
-    _a = 0;
-    i = 100;
-    i = 2002;
-    _b = 0.5;
-    f = 1.0;
-    f = 6.02e23;
-    f = 6.02E+23;
-    i = _a - 200;
-    i = 5 * 5 / 5 % 2
-    _B = '\n';
-    _B = '\0';
-    _B = ' ';
-    _B = 1;
-    _B = '1542Agfdb';
-
-    return 1;
+int main() {
+    a[1.23] = 5;
+    return 'c';
 }
