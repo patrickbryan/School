@@ -66,7 +66,6 @@ int lex(void) {
 			case INTVAL: printf("INTVAL"); break;
 			case CHARVAL: printf("CHARVAL"); break;
 			case FLOATVAL: printf("FLOATVAL"); break;
-			case EXP: printf("EXP"); break;
 			default: printf("unknown!!!!"); hasError = 1;
 		}
 		printf(" %s\n", yytext);
