@@ -14,7 +14,7 @@ cflatc: lexxer.o semana.tab.o cflatc.o
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-lexxer.c: lexxer.l:
+lexxer.c: lexxer.l
 	$(LEX) lexxer.l
 	
 semana.tab.c semana.tab.h: semana.y
