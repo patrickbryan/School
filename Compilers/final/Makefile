@@ -1,21 +1,31 @@
-CFLAGS=-ansi -pedantic -g -Iinclude
-
+CC=gcc
 LEX=flex
 YACC=bison -y
+
+CFLAGS=-ansi -pedantic -g
 YFLAGS=-d
+
+APP=cflatc
+OBJECTS=lex.yy.o y.tab.o $(APP).o
 
 default : all
 
 all : cflatc
 
-cflatc: lexxer.o semana.tab.o cflatc.o
+cflatc: $(OBJECTS)
 	$(CC) $(CFLAGS) $^ -o $@
 	
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -Iinclude -c $< -o $@
 
-lexxer.c: lexxer.l
-	$(LEX) lexxer.l
+lex.yy.c: lexxer.l
+	$(LEX) $(LFLAGS) lexxer.l
 	
-semana.tab.c semana.tab.h: semana.y
+y.tab.c y.tab.h: semana.y
 	$(YACC) $(YFLAGS) $<
+
+clean:
+	rm -rf $(APP)
+	rm -rf $(OBJECTS)
+	rm -rf y.tab.c y.tab.h
+	rm -rf lex.yy.c

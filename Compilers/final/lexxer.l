@@ -4,12 +4,12 @@
  */
 /*gcc lexxer.c lex.yy.c -o lexxer
 ./lexxer < C FILE TO SCAN*/
- 
+
 %{
     #include "lexxer.h"
-    /*#include "y.tab.h"*/
+    /* #include "y.tab.h" */
 %}
- 
+
 %%
 "typedef"                     return TYPEDEF;
 "main"                        return MAIN;
@@ -24,8 +24,8 @@
 "putc"                        return PUTC;
 "puti"                        return PUTI;
 "putf"                        return PUTF;
-"/*"		     		      return COMMENTBEGIN;
-"*/"				          return COMMENTEND;
+"/*"                          return COMMENTBEGIN;
+"*/"                          return COMMENTEND;
 "char"                        return CHAR;
 "int"                         return INT;
 "float"                       return FLOAT;

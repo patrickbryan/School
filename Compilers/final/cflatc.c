@@ -27,28 +27,28 @@ int main(int argc, char *argv[])
         printf("Could not open file %s", argv[1]);
         return -1;
     }
-    
+
     switch (argv[2][1]) {
-        case 'c':
-            printf("compiling and outputting MIPS R2000 assembler (.asm)\n");
-            compile();
-            break;
-        case 'i':
-            printf("performing sematic analysis and outputting intermediate representation (.inr)\n");
-            semanticAnalysis();
-            break;
-        case 's':
-            printf("performing type checking and outputting symbol table (.sym)\n");
-            typeCheck();
-            break;
-        case 'a':
-            printf("performing syntax analysis and outputting abstract syntax (.abs)\n");
-            syntaxAnalysis();
-            break;
-        default:
-            printf("Unrecognized argument\n");
-            printf("Use: cflatc sourceFile -[asic]\n");
-            return -1;
+    case 'c':
+        printf("compiling and outputting MIPS R2000 assembler (.asm)\n");
+        compile();
+        break;
+    case 'i':
+        printf("performing sematic analysis and outputting intermediate representation (.inr)\n");
+        semanticAnalysis();
+        break;
+    case 's':
+        printf("performing type checking and outputting symbol table (.sym)\n");
+        typeCheck();
+        break;
+    case 'a':
+        printf("performing syntax analysis and outputting abstract syntax (.abs)\n");
+        syntaxAnalysis();
+        break;
+    default:
+        printf("Unrecognized argument\n");
+        printf("Use: cflatc sourceFile -[asic]\n");
+        return -1;
     }
     return 0;
 }
@@ -60,17 +60,17 @@ int fileOpened(char* fileName) {
 
 /*TODO: finish*/
 void compile(void) {
-    
+
 }
 
 /*TODO: finish*/
 void semanticAnalysis(void) {
-    
+
 }
 
 /*TODO: finish*/
 void typeCheck(void) {
-    
+
 }
 
 int syntaxAnalysis(void) {
